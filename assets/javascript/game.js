@@ -8,7 +8,6 @@ let resetButton = document.querySelector("#reset-button");
 let numResets = document.querySelector("#num-resets");
 
 
-
 //Shows variable settings in console for checking.
 console.log(teamOneNumGoals, teamOneNumShots, teamOneShotButton, teamTwoNumGoals, teamTwoNumShots, teamTwoShotButton, resetButton, numResets);
 
@@ -31,4 +30,11 @@ teamTwoShotButton.addEventListener("click", function(){
   teamTwoNumShots.innerText = parseInt(teamTwoNumShots.innerText) + 1;
 });
 
+resetButton.addEventListener("click", function(){
+  teamOneNumGoals.innerText = 0;
+  teamOneNumShots.innerText = 0;
+  teamTwoNumGoals.innerText = 0;
+  teamTwoNumShots.innerText = 0;
+  numResets.innerText = parseInt(numResets.innerText) + 1;
+});
 
